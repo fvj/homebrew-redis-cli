@@ -2,23 +2,15 @@
 
 Install a [redis-cli](http://redis.io/) via homebrew.
 
-## Install
+**original version in aoki/homebrew-redis-cli**, adapted to 7.4.2 and
+more convenient (at least for me) installation.
 
-```bash
-brew tap aoki/redis-cli
-brew update && brew doctor
-brew install redis-cli
-```
 
 ## Bump formula
 
 ```
 ./bump ${VERSION} > redis-cli.rb
-make link
-brew info redis-cli
-brew uninstall redis-cli
-brew install redis-cli
+(brew info redis-cli && brew uninstall redis-cli) || exit 0
+make install
 redis-cli -v
-make unlink
-git tag ${VERSION}
 ```
