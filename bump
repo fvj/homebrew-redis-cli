@@ -8,7 +8,7 @@ FILE_HASH=${1}
 cat << END_OF＿TEMPLATE
 class RedisCli < Formula
   desc "Install the redis-cli only."
-  homepage "https://github.com/aoki/homebrew-redis-cli"
+  homepage "https://github.com/fvj/homebrew-redis-cli"
   version "${VERSION}"
   sha256 "${FILE_HASH}"
   url "https://github.com/antirez/redis/archive/#{version}.tar.gz"
